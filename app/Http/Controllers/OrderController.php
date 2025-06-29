@@ -106,4 +106,9 @@ if($item->order_count <= $item->stock){
           'message' => 'Order Changed Successfully'
         ],200);
     }
+
+    //sale information
+    public function saleInformation(){
+       return view('admin.order.saleInformation');
+    }
 }
