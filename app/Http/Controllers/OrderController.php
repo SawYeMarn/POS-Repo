@@ -109,6 +109,15 @@ if($item->order_count <= $item->stock){
 
     //sale information
     public function saleInformation(){
-       return view('admin.order.saleInformation');
+
+       $order = Order::select(
+        'users.name as userName','users.phone','users.address','orders.id as order_id',
+        'orders.order_code','orders.status','orders.created_at','orders.user_id as userId'
+    )
+        ->leftJoin('users','orders.user_id','users.id')
+        ->where('orders.status',1)
+        ->get();
+
+       return view('admin.order.saleInformation',compact('order'));
     }
 }
