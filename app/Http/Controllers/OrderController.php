@@ -114,6 +114,9 @@ if($item->order_count <= $item->stock){
         'users.name as userName','users.phone','users.address','orders.id as order_id',
         'orders.order_code','orders.status','orders.created_at','orders.user_id as userId'
     )
+    ->when(request('searchKey'),function($query){
+        $query->whereAny(['orders.order_code'], 'like', '%'.request('searchKey').'%');
+    })
         ->leftJoin('users','orders.user_id','users.id')
         ->where('orders.status',1)
         ->get();
