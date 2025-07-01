@@ -262,4 +262,7 @@ public function orderList(){
     ->get();
     return view('customer.order.list',compact('orders'));
 }
+
+//order detail
+
 }

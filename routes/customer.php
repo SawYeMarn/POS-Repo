@@ -20,6 +20,7 @@ Route::get('tempStorage',[UserController::class,'tempStorage'])->name('customer#
 Route::post('order',[UserController::class,'order'])->name('customer#order');
 Route::get('orderList',[UserController::class,'orderList'])->name('customer#orderList');
 
+
 Route::group(['prefix'=>'contact'],function(){
     Route::get('contactAdmin',[ProfileController::class,'contact'])->name('contact#admin');
     Route::post('contactreport',[ProfileController::class,'report'])->name('contact#adminreport');
