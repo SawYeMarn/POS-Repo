@@ -66,6 +66,7 @@ Route::group(['prefix'=>'order'],function(){
      Route::get('reject',[OrderController::class,'orderCode'])->name('order#Reject');
      Route::get('statusChange',[OrderController::class,'orderStatusChange'])->name('order#Status');
       Route::get('confirm',[OrderController::class,'orderConfirm'])->name('order#Confirm');
+      Route::get('sale',[OrderController::class,'saleInformation'])->name('order#Sale');
 
 });
 

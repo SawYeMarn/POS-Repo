@@ -40,8 +40,9 @@
                                                         placeholder="09xxxxxxxx"> @error('phone')<div class="invalid-feedback">{{$message}} </div> @enderror
                                                 </div>
                                   <div class="row mt-4">
-                                      <div class="col"> <textarea name="address" value='' id="" cols="30"  rows="10" class="form-control @error('address') is-invalid @enderror " placeholder="Enter Address">
-                                        {{old('address')}} </textarea>
+                                      <div class="col">
+                                        <textarea name="address" value='' id="" cols="30"  rows="10" class="form-control @error('address') is-invalid @enderror " placeholder="Enter Address">
+                                       {{old('address')}}  </textarea>
                                         @error('address')<div class="invalid-feedback">{{$message}} </div> @enderror</div>
 
                                     </div>
