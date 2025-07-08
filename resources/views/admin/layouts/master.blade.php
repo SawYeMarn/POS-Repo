@@ -35,7 +35,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="{{route('admin#dashboard')}}">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -71,7 +71,7 @@
          @endif
 
             <li class="nav-item">
-                <a class="nav-link" href="#"><i class="fa-solid fa-list"></i><span>Sale Information </span></a>
+                <a class="nav-link" href="{{route('order#Sale')}}"><i class="fa-solid fa-list"></i><span>Sale Information </span></a>
             </li>
 
             <li class="nav-item">

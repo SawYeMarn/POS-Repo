@@ -3,9 +3,11 @@
 @section('content')
 
 
+
+
     <div class="container " style="margin-top: 150px">
         <div class="row">
-            <table class="table table-hover shadow-sm ">
+            <table id="order-table" class="table  table-hover shadow-sm ">
                 <thead class="bg-primary text-white">
                     <tr>
                         <th>Date</th>
@@ -17,8 +19,9 @@
 
               @foreach ($orders as $item )
                     <tr>
+                        <input type="hidden" class="orderId" value="{{$item->order_code}}">
                         <td>{{$item->created_at->format('j-F-Y')}}</td>
-                        <td>{{$item->order_code}}</td>
+                        <td> <a href="" class="orderCode">{{ $item->order_code }}</a></td>
                         <td>
 
                             @if ($item->status==0)
@@ -36,5 +39,14 @@
             </table>
         </div>
     </div>
+
+@endsection
+
+@section('js-script')
+
+<script>
+
+
+</script>
 
 @endsection
