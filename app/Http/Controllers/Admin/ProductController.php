@@ -15,7 +15,7 @@ class ProductController extends Controller
     }
 
 
-     public function create(Request $request){
+   public function create(Request $request){
   $this->validateProductData($request,'create');
   $data = $this->getProductData($request);
 
